@@ -46,6 +46,15 @@ There is also a example video guide available now:<br />
 - addfec.txt can be edited with any ASCII editor (Notepad++). DO NOT change EOL. Only not yet existing FECs will be added to container during the process.
 - Do NOT change FECContainer.fec with WhatTheFec tool, it will break file signature. M.I.B method will keep original FECs intact.
 
+### Editing Patches to make Maps work for MSA(ROW Maps)
+- Open the patches file on M.I.B folder, they can be downloaded from here: [Firmware Patches for MIB](https://mibsolution.one/index.php/f/179383)
+- Copy your SW-train patch to the patches file
+- Open the SW patch file compatible with your train and go to the AddFec folder
+- Open the addFecs.txt file
+- Edit the fec that starts with 023*****(like 023000EE) to 023D00ee
+- In the navigation option of the M.I.B go to check navigation codes
+- change the last two options to MSA or any RoW region that you need
+
 ### [ExceptionList BUG](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash/wiki/ExceptionList-BUG)
 - If your unit was patched with M.I.B before April 2021 run "Add new Fecs to FecContainer.fec" script in M.I.B -> PATCH.
 - This will switch over to FecContainer.fec based patch and avoid EL BUG - unit will get stuck during boot.
